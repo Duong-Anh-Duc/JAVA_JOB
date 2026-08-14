@@ -1,0 +1,233 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{
+    top=0.45in,
+    bottom=0.45in,
+    left=0.55in,
+    right=0.55in
+}
+
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{newtxtext,newtxmath}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+
+\definecolor{lightgray}{gray}{0.8}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\setlist[itemize]{
+    leftmargin=1.2em,
+    itemsep=0.1em,
+    topsep=0.15em,
+    parsep=0pt
+}
+
+\titleformat{\section}
+    {\large\bfseries\uppercase}
+    {}
+    {0pt}
+    {}
+    [\titlerule]
+
+\titlespacing*{\section}
+    {0pt}
+    {8pt}
+    {4pt}
+
+\newcommand{\labelitem}[2]{%
+    \textbf{+ #1:} & #2 \\
+}
+
+\begin{document}
+
+\begin{minipage}[c]{0.78\textwidth}
+\begin{center}
+
+{\LARGE\textbf{Duong Anh Duc}}\\[4pt]
+
+\faGithub\ 
+\href{https://github.com/Duong-Anh-Duc}{daduc03}
+\quad | \quad
+\faEnvelope\ 
+\href{mailto:ducytcg123456@gmail.com}{ducytcg123456@gmail.com}
+\quad | \quad
+\faPhone\ 0338617203
+
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.17\textwidth}
+\centering
+\includegraphics[
+    width=2.2cm,
+    height=2.7cm,
+    keepaspectratio
+]{avatar.png}
+\end{minipage}
+
+\section*{Education}
+
+\textbf{Posts and Telecommunications Institute of Technology}
+\hfill 2021 -- 2026\\
+Ha Noi, Viet Nam
+\hfill \textbf{GPA: 3.04}
+
+\section*{Skills}
+
+\textbf{Programming:} JavaScript, TypeScript, Java \quad
+\textbf{Frontend:} ReactJS, Next.js, React Native, Expo\\[2pt]
+\textbf{Backend:} Node.js, NestJS, ExpressJS \quad
+\textbf{Database:} PostgreSQL, MySQL, SQL Server, MongoDB, Redis\\[2pt]
+\textbf{Tools:} Git, GitHub, GitLab, Docker, RabbitMQ, Swagger, Postman \quad
+\textbf{English:} TOEIC 650
+
+\section*{Work Experience}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{} p{0.13\textwidth} !{\color{lightgray}\vrule width 0.8pt} X @{}}
+\textbf{2025 -- 2026} & 
+\textbf{TechLA AI -- Asinu Health Monitoring Application} \\[3pt]
+& 
+\begin{tabular}{@{} l @{\hspace{4pt}} p{0.73\textwidth} @{}}
+    \labelitem{Position}{Full-stack Developer}
+    \labelitem{Team size}{1 member}
+    \labelitem{Technologies}{React Native, Expo, TypeScript, Node.js, Express.js, PostgreSQL, Redis, Docker}
+    \labelitem{Description}{Production health monitoring application for iOS and Android, providing health tracking, AI-assisted assessment, caregiver connections, notifications, and subscription features.}
+\end{tabular} \\[3pt]
+& \textbf{+ Role \& Responsibilities:}
+\begin{itemize}
+    \item Developed health tracking and daily check-in features for blood glucose, blood pressure, weight, insulin, medication, meals, and water intake.
+    \item Built AI-assisted health assessment using \textbf{OpenAI and MedGemma}, including symptom analysis, adaptive questions, risk classification, and personalized recommendations.
+    \item Implemented AI safety mechanisms including structured output validation, emergency symptom detection, medical content filtering, provider fallback, and rate limiting.
+    \item Developed \textbf{Care Circle} for family/caregiver connections, health-data sharing, health alerts, and emergency notifications.
+    \item Implemented JWT authentication and social login with \textbf{Google, Apple, Facebook, and Zalo}, including onboarding, profile management, secure token storage, and account deletion.
+    \item Integrated \textbf{Google Play Billing, in-app purchases, QR payments, subscriptions, and Premium gifting}.
+    \item Built push notification workflows with Expo Notifications, including reminders, health alerts, caregiver notifications, action buttons, and deep linking.
+    \item Designed RESTful backend modules and improved reliability using \textbf{Zod, Redis, Jest, Sentry, database migrations, and rate limiting}.
+    \item Containerized and deployed backend services using \textbf{Docker, PostgreSQL, Redis, and Caddy}, with HTTPS, health checks, migrations, and CI/CD.
+\end{itemize}
+\end{tabularx}
+
+\vspace{6pt}
+{\color{lightgray}\hrule height 0.5pt}
+\vspace{6pt}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{} p{0.13\textwidth} !{\color{lightgray}\vrule width 0.8pt} X @{}}
+\textbf{2025 -- 2025} & 
+\textbf{Tinasoft} \\[3pt]
+& 
+\begin{tabular}{@{} l @{\hspace{4pt}} p{0.73\textwidth} @{}}
+    \labelitem{Position}{Backend Developer Intern}
+    \labelitem{Team size}{Development Team}
+    \labelitem{Technologies}{NestJS, TypeScript, REST API}
+    \labelitem{Description}{Backend development for an analytics and system monitoring platform.}
+\end{tabular} \\[3pt]
+& \textbf{+ Role \& Responsibilities:}
+\begin{itemize}
+    \item Developed RESTful APIs using \textbf{NestJS} for data aggregation and statistical reporting.
+    \item Implemented backend features for analytics and system monitoring.
+    \item Investigated and fixed bugs across existing modules and optimized APIs for performance and stability.
+\end{itemize}
+\end{tabularx}
+
+\section*{Projects}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{} p{0.13\textwidth} !{\color{lightgray}\vrule width 0.8pt} X @{}}
+\textbf{2025 -- 2026} & 
+\textbf{Multi-Role Learning Management System} \textit{(Graduation Project)} \\[3pt]
+& 
+\begin{tabular}{@{} l @{\hspace{4pt}} p{0.73\textwidth} @{}}
+    \labelitem{Position}{Full-stack Developer}
+    \labelitem{Team size}{4 members}
+    \labelitem{Technologies}{NestJS, Next.js, ReactJS, TypeScript, PostgreSQL, Redis, Socket.IO}
+    \labelitem{Description}{Full-stack LMS platform supporting learners, teachers, managers, and TOEIC examinations.}
+\end{tabular} \\[3pt]
+& \textbf{+ Role \& Responsibilities:}
+\begin{itemize}
+    \item Developed authentication, course, lesson, enrollment, payment, refund, affiliate, notification, and analytics modules.
+    \item Built real-time chat and notification features using \textbf{Socket.IO}.
+    \item Integrated \textbf{Zego Cloud} for live streaming and \textbf{Cloudinary} for media storage.
+    \item Developed a seven-part TOEIC examination system with countdown timers, audio/image questions, automatic grading, and performance analytics.
+\end{itemize}
+\vspace{2pt}
+\href{https://gitlab.com/viettt03/lms-backend}{GitLab Repository}
+\end{tabularx}
+
+\vspace{6pt}
+{\color{lightgray}\hrule height 0.5pt}
+\vspace{6pt}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{} p{0.13\textwidth} !{\color{lightgray}\vrule width 0.8pt} X @{}}
+\textbf{2025} & 
+\textbf{Spring Boot CV Management Backend} \textit{(Personal Project)} \\[3pt]
+& 
+\begin{tabular}{@{} l @{\hspace{4pt}} p{0.73\textwidth} @{}}
+    \labelitem{Position}{Backend Developer}
+    \labelitem{Team size}{1 (Personal Project)}
+    \labelitem{Technologies}{Spring Boot, Java, MongoDB, PostgreSQL, JWT, Docker}
+    \labelitem{Description}{CV and job management backend supporting users, companies, jobs, resumes, roles, and permissions.}
+\end{tabular} \\[3pt]
+& \textbf{+ Role \& Responsibilities:}
+\begin{itemize}
+    \item Designed feature-based backend architecture using \textbf{Spring Boot}.
+    \item Implemented \textbf{JWT authentication, refresh tokens, and RBAC}.
+    \item Used MongoDB for business data and PostgreSQL/Flyway for analytics.
+    \item Implemented user, company, job, resume, role, permission, email, and scheduled job modules.
+\end{itemize}
+\vspace{2pt}
+\href{https://github.com/Duong-Anh-Duc/JAVA_JOB}{GitHub Repository}
+\end{tabularx}
+
+\vspace{6pt}
+{\color{lightgray}\hrule height 0.5pt}
+\vspace{6pt}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{} p{0.13\textwidth} !{\color{lightgray}\vrule width 0.8pt} X @{}}
+\textbf{2025} & 
+\textbf{Microservices Task Management} \textit{(Personal Project)} \\[3pt]
+& 
+\begin{tabular}{@{} l @{\hspace{4pt}} p{0.73\textwidth} @{}}
+    \labelitem{Position}{Backend Developer}
+    \labelitem{Team size}{1 (Personal Project)}
+    \labelitem{Technologies}{NestJS, RabbitMQ, Docker, Microservices}
+    \labelitem{Description}{Microservice-based task management platform for users, teams, tasks, validation, and notifications.}
+\end{tabular} \\[3pt]
+& \textbf{+ Role \& Responsibilities:}
+\begin{itemize}
+    \item Designed Task, User, Team, Validation, Notification, and API Gateway services using \textbf{NestJS}.
+    \item Implemented asynchronous inter-service communication using \textbf{RabbitMQ}.
+    \item Developed REST APIs and containerized independent services using \textbf{Docker}.
+\end{itemize}
+\vspace{2pt}
+\href{https://github.com/Duong-Anh-Duc/BTL-SOA}{GitHub Repository}
+\end{tabularx}
+
+\section*{Certificates}
+
+\textbf{Applications of Algorithm Certificate}
+\hfill Jul. 2023 -- Aug. 2023\\
+Samsung Electronics Vietnam \& Posts and Telecommunications Institute of Technology
+
+\end{document}
