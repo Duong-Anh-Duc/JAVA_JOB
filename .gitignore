@@ -1,0 +1,13 @@
+# Java/Maven build output
+backend/target/
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Local environment and OS files
+.env
+backend/.env
+frontend/.env.local
+.DS_Store
+*.log

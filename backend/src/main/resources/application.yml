@@ -1,0 +1,56 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  application:
+    name: cv-backend
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/cv}
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DATABASE:cv}
+    username: ${POSTGRES_USERNAME:postgres}
+    password: ${POSTGRES_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 1MB
+  mail:
+    host: ${MAIL_HOST:localhost}
+    port: ${MAIL_PORT:25}
+    username: ${SENDER_EMAIL:}
+    password: ${PASSWORD_EMAIL:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: ${MAIL_STARTTLS:false}
+
+server:
+  port: ${PORT:8080}
+  error:
+    include-message: never
+
+app:
+  jwt:
+    access-secret: ${JWT_ACCESS_TOKEN_SECRET:change-me-access-secret-change-me-access-secret}
+    refresh-secret: ${JWT_REFRESH_TOKEN_SECRET:change-me-refresh-secret-change-me-refresh-secret}
+    access-expire-ms: ${JWT_ACCESS_EXPIRE_MS:900000}
+    refresh-expire-ms: ${JWT_REFRESH_EXPIRE_MS:604800000}
+  init:
+    enabled: ${SHOULD_INIT:false}
+    password: ${INIT_PASSWORD:123456}
+  upload-dir: ${UPLOAD_DIR:../NestJS_CV/public/images}
+  cron:
+    daily: ${CRON_DAILY_JOB_NOTIFICATION:0 11 * * *}
+    weekly: ${CRON_WEEKLY_JOB_SUMMARY:0 9 * * 1}
+    timezone: ${CRON_TIMEZONE:Asia/Ho_Chi_Minh}
+
+spring.web.resources.static-locations: classpath:/static/,file:../NestJS_CV/public/

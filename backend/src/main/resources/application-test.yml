@@ -1,0 +1,15 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+  jpa:
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: false
+  mail:
+    test-connection: false
+
+app:
+  init:
+    enabled: false

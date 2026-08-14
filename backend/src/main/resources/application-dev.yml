@@ -1,0 +1,24 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/cv}
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DATABASE:cv}
+    username: ${POSTGRES_USERNAME:postgres}
+    password: ${POSTGRES_PASSWORD:postgres}
+  mail:
+    host: ${MAIL_HOST:localhost}
+    port: ${MAIL_PORT:1025}
+    username: ${SENDER_EMAIL:}
+    password: ${PASSWORD_EMAIL:}
+
+server:
+  port: ${PORT:8080}
+
+app:
+  init:
+    enabled: ${SHOULD_INIT:false}
+    password: ${INIT_PASSWORD:123456}
